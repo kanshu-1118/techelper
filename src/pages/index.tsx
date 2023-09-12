@@ -1,6 +1,7 @@
-import { Box,Flex,Image,Center } from "@chakra-ui/react"
+import { Box,Flex,Image,Center,Text } from "@chakra-ui/react"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import Footnav from "@/components/footnav"
 
 export default function Home() {
 
@@ -20,7 +21,11 @@ export default function Home() {
 
   return (
     <>
-      <Flex>こんにちは</Flex>
+      <Center w={"100vw"} h={"100vh"} bgColor={"tomato"} flexDir={"column"} marginTop={"env(safe-area-inset-top)px"}>
+        <Text>こんにちは</Text>
+        <Text>アドレスバー非表示にしたい</Text>
+      </Center>
+      <Footnav />
     </>
   )
 }
