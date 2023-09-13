@@ -50,7 +50,7 @@ export default function Home() {
           <Text padding={"2px"} borderBottom={"1.5px solid #000"}>並び替え ↓</Text>
         </Flex>
         <Flex w={"calc(100vw - 64px)"} justifyContent={"space-between"} gap={"18px"} flexWrap={"wrap"}>
-          {cms.map((e,i) => {
+          {cms.map((e :any,i :number) => {
             return(
             <Link 
               href={{

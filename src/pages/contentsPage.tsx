@@ -30,7 +30,7 @@ const ContentsPage : NextPage = () => {
     return (
         <>
             <Header />
-            {cms.map((e,i) => {
+            {cms.map((e : any,i :number) => {
                 {if (i == router.query.i as unknown as number) {
                     return(
                         <Flex key={i}>
