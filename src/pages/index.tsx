@@ -5,6 +5,7 @@ import Footnav from "@/components/footnav"
 import Header from "@/components/header"
 import { color } from "@/utils/colortypeTheme"
 import Contents from "@/components/contents"
+import Modal from "@/components/modal"
 
 export default function Home() {
 
@@ -39,6 +40,10 @@ export default function Home() {
     setDropHeight("52px")
     setDropBottom("50%")
     setOpenOb("open")
+  }
+
+  const modal = () => {
+
   }
 
   return (
@@ -100,7 +105,11 @@ export default function Home() {
           }
         </Center>
       </Flex>
+      <Center position={"fixed"} bottom={"100px"} left={"142px"} onClick={() => modal()} as={"button"} bgColor={color.main} color={color.white} borderRadius={"10px"}>
+        <Text fontSize={"14px"} padding={"8px 24px"}>絞り込み検索</Text>
+      </Center>
     <Footnav />
+    <Modal />
     </Box>
 
   )

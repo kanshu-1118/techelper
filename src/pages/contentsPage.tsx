@@ -9,7 +9,7 @@ import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 
 
-const ContentsPage : NextPage = () => {
+const ContentsPage = () => {
 
     const router = useRouter()
 
@@ -28,7 +28,7 @@ const ContentsPage : NextPage = () => {
     
 
     return (
-        <>
+        <Box>
             <Header />
             {cms.map((e : any,i :number) => {
                 {if (i == router.query.i as unknown as number) {
@@ -40,7 +40,7 @@ const ContentsPage : NextPage = () => {
                 }}
             })}
             <Footnav />
-        </>
+        </Box>
     )
 }
 
