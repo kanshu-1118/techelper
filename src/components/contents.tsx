@@ -20,7 +20,7 @@ const contents = (props : propsType) => {
             <Image src={props.image} alt='' borderRadius={"5px"} />
             <Text fontSize={"10px"} fontWeight={"bold"}>{props.title}</Text>
             <Flex alignItems={"end"} justifyContent={"space-between"}>
-                <Flex fontSize={"6px"} flexDir={"column"} color={color.darkgray}>
+                <Flex fontSize={"12px"} flexDir={"column"} color={color.darkgray}>
                     <Text>{props.schedule}</Text>
                     <Text>{props.time}</Text>
                 </Flex>

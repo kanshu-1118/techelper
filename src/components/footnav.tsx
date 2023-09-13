@@ -32,7 +32,7 @@ const Footnav = () => {
 
     return (
         <Flex position={"fixed"} bottom={"-1"} color={color.black} w={"100vw"} h={"81px"} zIndex={"10"} bgColor={color.base} boxShadow={"0px 0px 4px rgba(0,0,0,0.25)"} >
-            <Link href={"#"} passHref>
+            <Link href={"/chat"} passHref>
                 <Center flexDir={"column"} w={"calc(100vw/3)"} paddingTop={"16px"} gap={"3px"} onClick={(e) => {chatSelect()}}>
                     <Image src={`./images/${chat}`} alt="" />
                     <Text fontSize={"8px"}>チャット</Text>
