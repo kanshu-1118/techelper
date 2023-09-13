@@ -6,7 +6,7 @@ import { color } from '@/utils/colortypeTheme'
 const Footnav = () => {
 
     const [chat,setChat] = useState(`chatlogo.svg`)
-    const [home,setHome] = useState(`homelogo.svg`)
+    const [home,setHome] = useState(`homelogoSelect.svg`)
     const [mypage,setMypage] = useState(`mypagelogo.svg`)
 
     const [ob,setOb] = useState("home")
@@ -38,7 +38,7 @@ const Footnav = () => {
                     <Text fontSize={"8px"}>チャット</Text>
                 </Center>
             </Link>
-            <Link href={"#"} passHref>
+            <Link href={"/"} passHref>
                 <Center flexDir={"column"} w={"calc(100vw/3)"} paddingTop={"16px"} gap={"3px"} onClick={() => {homeSelect()}}>
                     <Image src={`./images/${home}`} alt="" />
                     <Text fontSize={"8px"}>ホーム</Text>

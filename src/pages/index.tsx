@@ -45,12 +45,26 @@ export default function Home() {
     <Box>
     <Header />
       <Flex alignItems={"center"} w={"100vw"} h={"100vh"} bgColor={color.base} flexDir={"column"}>
-        <Flex marginTop={"130px"} justifyContent={"center"} gap={"18px"} flexWrap={"wrap"}>
+        <Flex w={"calc(100vw - 64px)"} flexDir={"column"} justifyContent={"space-between"} marginTop={"130px"}>
+        <Flex margin={"32px 0"} justifyContent={"end"}>
+          <Text padding={"2px"} borderBottom={"1.5px solid #000"}>並び替え ↓</Text>
+        </Flex>
+        <Flex w={"calc(100vw - 64px)"} justifyContent={"space-between"} gap={"18px"} flexWrap={"wrap"}>
           {cms.map((e,i) => {
             return(
+            <Link 
+              href={{
+                pathname:"/contentsPage",
+                query:{i}
+              }}
+              // passHref
+              key={i}
+            >
               <Contents key={i} title={e.title} where={e.where[0]} category={e.category} monny={e.monny} schedule={e.schedule} image={e.image.url} time={e.time} />
+            </Link>
             )
           })}
+        </Flex>
         </Flex>
         <Center w={"52px"} overflow={"hidden"} position={"fixed"} right={"20px"} bottom={"100px"} h={dropHeight} padding={"24px 0"} justifyContent={openOb == "open" ? "center" : "space-between"} transition={".3s ease-in-out"} flexDirection={"column"} borderRadius={"50px"} bgColor={color.base} boxShadow={"1px 1px 3px rgba(0,0,0,0.25)"}
           onMouseDown={() => click()}>
