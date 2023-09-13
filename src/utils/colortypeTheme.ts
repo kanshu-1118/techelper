@@ -5,6 +5,7 @@ const color = {
     white:"#FEFEFE",
     black:"#1E1E1E",
     gray:"#EFEFEF",
+    darkgray:"#A6A6A6",
 };
 const font = {
     size: {

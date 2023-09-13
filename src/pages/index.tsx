@@ -45,8 +45,12 @@ export default function Home() {
     <Box>
     <Header />
       <Flex alignItems={"center"} w={"100vw"} h={"100vh"} bgColor={color.base} flexDir={"column"}>
-        <Flex marginTop={"130px"}>
-          <Contents></Contents>
+        <Flex marginTop={"130px"} justifyContent={"center"} gap={"18px"} flexWrap={"wrap"}>
+          {cms.map((e,i) => {
+            return(
+              <Contents key={i} title={e.title} where={e.where[0]} category={e.category} monny={e.monny} schedule={e.schedule} image={e.image.url} time={e.time} />
+            )
+          })}
         </Flex>
         <Center w={"52px"} overflow={"hidden"} position={"fixed"} right={"20px"} bottom={"100px"} h={dropHeight} padding={"24px 0"} justifyContent={openOb == "open" ? "center" : "space-between"} transition={".3s ease-in-out"} flexDirection={"column"} borderRadius={"50px"} bgColor={color.base} boxShadow={"1px 1px 3px rgba(0,0,0,0.25)"}
           onMouseDown={() => click()}>
@@ -82,7 +86,8 @@ export default function Home() {
           }
         </Center>
       </Flex>
-      <Footnav />
+    <Footnav />
     </Box>
+
   )
 }

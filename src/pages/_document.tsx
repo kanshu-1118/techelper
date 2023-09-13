@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+// import Footnav from '@/components/footnav'
 
 export default function Document() {
   return (
