@@ -41,7 +41,7 @@ export default function Home() {
   }
 
   return (
-    <>
+    <Box>
     <Header />
       <Center w={"100vw"} h={"100vh"} bgColor={"tomato"} flexDir={"column"}>
         <Text>こんにちは</Text>
@@ -81,6 +81,6 @@ export default function Home() {
         </Center>
       </Center>
       <Footnav />
-    </>
+    </Box>
   )
 }
