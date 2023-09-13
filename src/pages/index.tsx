@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import Footnav from "@/components/footnav"
 import Header from "@/components/header"
 import { color } from "@/utils/colortypeTheme"
+import Contents from "@/components/contents"
 
 export default function Home() {
 
@@ -43,9 +44,10 @@ export default function Home() {
   return (
     <Box>
     <Header />
-      <Center w={"100vw"} h={"100vh"} bgColor={"tomato"} flexDir={"column"}>
-        <Text>こんにちは</Text>
-        <Text>アドレスバー非表示にしたい</Text>
+      <Flex alignItems={"center"} w={"100vw"} h={"100vh"} bgColor={color.base} flexDir={"column"}>
+        <Flex marginTop={"130px"}>
+          <Contents></Contents>
+        </Flex>
         <Center w={"52px"} overflow={"hidden"} position={"fixed"} right={"20px"} bottom={"100px"} h={dropHeight} padding={"24px 0"} justifyContent={openOb == "open" ? "center" : "space-between"} transition={".3s ease-in-out"} flexDirection={"column"} borderRadius={"50px"} bgColor={color.base} boxShadow={"1px 1px 3px rgba(0,0,0,0.25)"}
           onMouseDown={() => click()}>
           {openOb == "close"
@@ -79,7 +81,7 @@ export default function Home() {
           </Center>
           }
         </Center>
-      </Center>
+      </Flex>
       <Footnav />
     </Box>
   )

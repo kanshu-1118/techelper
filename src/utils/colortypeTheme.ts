@@ -4,6 +4,7 @@ const color = {
     accentRed:"#FD4A4A",
     white:"#FEFEFE",
     black:"#1E1E1E",
+    gray:"#EFEFEF",
 };
 const font = {
     size: {
