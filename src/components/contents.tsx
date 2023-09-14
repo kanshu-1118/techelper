@@ -31,7 +31,7 @@ const contents = (props : propsType) => {
                 {props.category.map((e,i) => {
 
                     return (
-                        <Category key={i} title={e} bgc={color.base} borderColor={color.main} />
+                        <Category  key={i} title={e} bgc={color.base} borderColor={color.main} />
                     )
                 })}
                 {/* <Category title={"顧問"} bgc={color.base} borderColor={color.main} />

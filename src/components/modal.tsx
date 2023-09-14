@@ -75,7 +75,7 @@ const Modal = (props : propsType) => {
 
                     </Center>
                 </Flex> */}
-                <Flex as={"button"} marginTop={"48px"} padding={"8px 27px"} onClick={props.closefun} color={color.white} borderRadius={"10px"} alignItems={"end"} gap={"8px"} bgColor={color.main} >
+                <Flex as={"button"} marginTop={"20px"} padding={"8px 27px"} onClick={props.closefun} color={color.white} borderRadius={"10px"} alignItems={"end"} gap={"8px"} bgColor={color.main} >
                     <Text fontSize={"10px"}>現在の絞り込み件数</Text>
                     <Text fontSize={"14px"}>1,000件</Text>
                 </Flex>
