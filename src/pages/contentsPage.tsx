@@ -29,13 +29,15 @@ const ContentsPage = () => {
 
     return (
         <Box>
-            <Header />
             {cms.map((e : any,i :number) => {
                 {if (i == router.query.i as unknown as number) {
                     return(
-                        <Flex key={i}>
-                            <Text>{e.title}</Text>
-                        </Flex>
+                        <Center key={i}>
+                            <Flex position={"fixed"} gap={"110px"} alignItems={"center"} color={color.black} top={"-1"} padding={"20px 0 16px 24px"} w={"100vw"} zIndex={"10"} bgColor={color.base} boxShadow={"0px 0px 4px rgba(0,0,0,0.25)"} >
+                                <Image src="./images/closelogo.svg" alt="" w={"20px"}  />
+                                <Text fontSize={"14px"} fontWeight={"bold"}>{e.title}</Text>
+                            </Flex>
+                        </Center>
                     )
                 }}
             })}

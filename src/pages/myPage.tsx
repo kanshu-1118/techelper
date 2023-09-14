@@ -7,7 +7,7 @@ import { color } from "@/utils/colortypeTheme"
 import Contents from "@/components/contents"
 import member from "@/lib/member"
 
-const Chat = () => {
+const MyPage = () => {
     return (
         <Center>
             <Flex position={"fixed"} gap={"20px"} flexDirection={"column"} justifyContent={"center"} alignItems={"center"} color={color.black} top={"-1"} padding={"20px 0 16px 0"} w={"100vw"} zIndex={"10"} bgColor={color.base} boxShadow={"0px 0px 4px rgba(0,0,0,0.25)"} >
@@ -38,4 +38,4 @@ const Chat = () => {
     )
 }
 
-export default Chat
+export default MyPage

@@ -44,7 +44,7 @@ const Footnav = () => {
                     <Text fontSize={"8px"}>ホーム</Text>
                 </Center>
             </Link>
-            <Link href={"#"} passHref>
+            <Link href={"/myPage"} passHref>
                 <Center flexDir={"column"} w={"calc(100vw/3)"} paddingTop={"16px"} gap={"3px"} onClick={() => {mypageSelect()}}>
                     <Image src={`./images/${mypage}`} alt="" />
                     <Text fontSize={"8px"}>マイページ</Text>

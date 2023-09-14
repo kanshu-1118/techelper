@@ -15,6 +15,7 @@ export default function Home() {
   const [dropHeight,setDropHeight] = useState("52px")
   const [dropBottom,setDropBottom] = useState("50%")
   const [openOb,setOpenOb] = useState("open")
+  const [modalBottom,setModalBottom] = useState("-1000px")
 
   useEffect(() => {
     const fecthello = async () => {
@@ -43,7 +44,11 @@ export default function Home() {
   }
 
   const modal = () => {
+    setModalBottom("0")
+  }
 
+  const modalclose = () => {
+    setModalBottom("-1000px")
   }
 
   return (
@@ -109,7 +114,7 @@ export default function Home() {
         <Text fontSize={"14px"} padding={"8px 24px"}>絞り込み検索</Text>
       </Center>
     <Footnav />
-    <Modal />
+    <Modal bottom={modalBottom} closefun={() => modalclose()} />
     </Box>
 
   )

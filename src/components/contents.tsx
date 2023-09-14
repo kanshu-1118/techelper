@@ -16,7 +16,7 @@ interface propsType {
 
 const contents = (props : propsType) => {
     return (
-        <Flex flexDirection={"column"} gap={"4px"} overflow={"hidden"} color={color.black} w={"154px"} height={"222px"}>
+        <Flex flexDirection={"column"} gap={"4px"} overflow={"hidden"} color={color.black} w={"154px"} height={"230px"}>
             <Image src={props.image} alt='' borderRadius={"5px"} />
             <Text fontSize={"10px"} fontWeight={"bold"}>{props.title}</Text>
             <Flex alignItems={"end"} justifyContent={"space-between"}>
