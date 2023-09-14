@@ -37,7 +37,7 @@ const Modal = (props : propsType) => {
                 <Flex flexDirection={"column"} w={"calc(100vw - 68px)"} gap={"12px"} >
                     <Flex w={"calc(100vw - 68px)"} justifyContent={"space-between"}>
                         <Text fontWeight={"bold"}>給料</Text>
-                        <Text>{value}</Text>
+                        <Text>¥{value}</Text>
                     </Flex>
                     <Flex as={"input"} type="range" id="slider01" min="0" max="100" step="1" onChange={(event:any) => setValue(event.target.value)} value={value} w={"calc(100vw - 68px)"} />
                 </Flex>
